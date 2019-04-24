@@ -1,0 +1,7 @@
+# example for running the container
+version: "2"
+services:
+  tetribuild:
+    image: shukriadams/tetrifact-build:latest
+    container_name: tetrifactbuild
+    restart: unless-stopped
