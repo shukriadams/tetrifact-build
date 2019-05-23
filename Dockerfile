@@ -5,11 +5,13 @@ FROM ubuntu:16.04
 
 RUN apt-get update \
     && apt-get install -y wget \
+    && apt-get install -y zip \
     && wget -q https://packages.microsoft.com/config/ubuntu/16.04/packages-microsoft-prod.deb \
     && sh -c 'dpkg -i packages-microsoft-prod.deb' \
     && apt-get install apt-transport-https -y \
     && apt-get update \
     && apt-get install dotnet-sdk-2.2 -y \
+    && dotnet tool install --global dotnet-reportgenerator-globaltool --version 4.1.5 \
     && mkdir -p /tmp/tetrifact
 
 # keep container alive for building
