@@ -6,6 +6,7 @@ FROM ubuntu:16.04
 RUN apt-get update \
     && apt-get install -y wget \
     && apt-get install -y git \
+    && apt-get install -y curl \
     && apt-get install -y zip \
     && wget -q https://packages.microsoft.com/config/ubuntu/16.04/packages-microsoft-prod.deb \
     && sh -c 'dpkg -i packages-microsoft-prod.deb' \
