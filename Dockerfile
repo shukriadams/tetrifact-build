@@ -12,7 +12,7 @@ RUN apt-get update \
     && sh -c 'dpkg -i packages-microsoft-prod.deb' \
     && apt-get install apt-transport-https -y \
     && apt-get update \
-    && apt-get install dotnet-sdk-2.2 -y \
+    && apt-get install dotnet-sdk-3.1 -y \
     && dotnet tool install --global dotnet-reportgenerator-globaltool --version 4.1.5 \
     && mkdir -p /tmp/tetrifact
 

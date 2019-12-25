@@ -15,5 +15,9 @@ sh ./build.sh
 After building, confirm dotnet core is working with
 
     docker-compose up -d
-    docker exec -it tetrifact-build bash
+    docker exec -it tetrifactbuild bash
     dotnet
+
+## Deploy
+
+Login in to to container repo, tag and push
